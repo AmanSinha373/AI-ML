@@ -269,9 +269,81 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "id": "1746a642-ee56-4771-a139-f49be852455e",
+   "metadata": {},
+   "source": [
+    "## Checking on test data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "cb3ffaa2-5891-4579-a59f-d45171996bd9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Found 5000 images belonging to 2 classes.\n"
+     ]
+    }
+   ],
+   "source": [
+    "test_datagen = ImageDataGenerator(rescale=1./255)\n",
+    "\n",
+    "test_generator = test_datagen.flow_from_directory(\n",
+    "    r'C:\\Users\\Aman Sinha\\Downloads\\dogs_vs_cats\\test',             \n",
+    "    target_size=(150, 150),# Resize all images to this size\n",
+    "    batch_size=32,\n",
+    "    class_mode='binary',   #  Use 'categorical' if >2 classes\n",
+    "    shuffle=False          #  Do NOT shuffle so that labels match prediction order\n",
+    ")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "335e9689-2d63-4d0c-a4ab-730c0cb87d18",
+   "metadata": {},
+   "source": [
+    "## Evaluate the Model on Test Set"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "af9a3aae-f64b-4f8d-8628-0b46eb4299b3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "157/157 [==============================] - 127s 813ms/step - loss: 0.4858 - accuracy: 0.7858\n",
+      "Test Loss: 0.4858211874961853\n",
+      "Test Accuracy: 0.7857999801635742\n"
+     ]
+    }
+   ],
+   "source": [
+    "loss, accuracy = model.evaluate(test_generator)\n",
+    "print(\"Test Loss:\", loss)\n",
+    "print(\"Test Accuracy:\", accuracy)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3123cfed-7029-4250-96fc-c3510e575a54",
+   "metadata": {},
+   "source": [
+    "Test accuracy is ~78.6%, which suggests some room for generalization improvement. To improve this, I’d consider tuning the network architecture, applying data augmentation, or switching to transfer learning."
+   ]
+  },
+  {
    "cell_type": "code",
    "execution_count": null,
-   "id": "5048ed1b-dc4e-4e97-8558-7d4d10ed1013",
+   "id": "85ea5941-bf16-4d40-b004-777253610b9b",
    "metadata": {},
    "outputs": [],
    "source": []
