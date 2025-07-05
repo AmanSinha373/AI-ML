@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/977549163803340471/754c0ca5a80b4639be334b41f6cfcb55/artifacts
+end_time: 1751714770562
+entry_point_name: ''
+experiment_id: '977549163803340471'
+lifecycle_stage: active
+run_id: 754c0ca5a80b4639be334b41f6cfcb55
+run_name: rambunctious-doe-459
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751714751758
+status: 3
+tags: []
+user_id: Aman Sinha

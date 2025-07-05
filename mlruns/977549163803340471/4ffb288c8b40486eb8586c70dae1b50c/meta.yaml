@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/977549163803340471/4ffb288c8b40486eb8586c70dae1b50c/artifacts
+end_time: 1751714741277
+entry_point_name: ''
+experiment_id: '977549163803340471'
+lifecycle_stage: active
+run_id: 4ffb288c8b40486eb8586c70dae1b50c
+run_name: nebulous-fish-773
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751714708687
+status: 3
+tags: []
+user_id: Aman Sinha

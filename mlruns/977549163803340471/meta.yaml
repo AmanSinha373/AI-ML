@@ -1,0 +1,6 @@
+artifact_location: mlflow-artifacts:/977549163803340471
+creation_time: 1751714707339
+experiment_id: '977549163803340471'
+last_update_time: 1751714707339
+lifecycle_stage: active
+name: StudentScore-Predictor
